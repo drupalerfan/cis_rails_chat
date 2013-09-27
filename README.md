@@ -134,9 +134,9 @@ To add emoticons selector you just have to add HTML DIV and use the below jQuery
 });
 ```
 For more reference you can have a look at the demo code for `CIS RAILS CHAT`
-```
+
   [Demo Application](https://github.com/ciserfan/chat_demo)
-```
+
 ## Configuration
 
 The configuration is set separately for each environment in the generated `config/cis_rails_chat.yml` file. Here are the options.
