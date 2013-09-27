@@ -119,8 +119,24 @@ CisRailsChat.subscribe("/messages/new", function(data, channel) {
 
 The Ruby `subscribe_to` helper call is still necessary with this approach to grant the user access to the channel. The JavaScript is just a callback for any custom behavior.
 
-NOTE: To use the emoticons in your chat you have to pass your message like `$.emoticons.replace(data.chat_message)`. This line will convert the emoticons signs into the real emoticons.  
+NOTE: To use the emoticons in your chat you have to pass your message like `$.emoticons.replace(data.chat_message)`. This line will convert the emoticons signs into the real emoticons.
 
+To add emoticons selector you just have to add HTML DIV and use the below jQuery code.
+```html
+<div class="overview">
+  <!-- Here all the emoticons will populated by below javascript code -->
+</div>
+```
+```javascript
+ $(document).ready(function(){
+  // Here I am using the overview class div you can use your's
+  $(".overview").html($.emoticons.toString());
+});
+```
+For more reference you can have a look at the demo code for `CIS RAILS CHAT`
+```
+  [Demo Application](https://github.com/ciserfan/chat_demo)
+```
 ## Configuration
 
 The configuration is set separately for each environment in the generated `config/cis_rails_chat.yml` file. Here are the options.
